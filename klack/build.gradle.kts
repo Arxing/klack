@@ -3,13 +3,13 @@ plugins {
 }
 
 dependencies {
-  implementation("org.jetbrains.kotlin:kotlin-stdlib:${Version.kotlin}")
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.coroutine}")
+  implementation(libs.kotlin.stdlib)
+  implementation(libs.kotlin.coroutines)
 
-  implementation("com.slack.api:bolt:${Version.slack}")
-  implementation("com.slack.api:bolt-ktor:${Version.slack}")
-  implementation("com.slack.api:slack-api-model-kotlin-extension:${Version.slack}")
-  implementation("com.slack.api:slack-api-client-kotlin-extension:${Version.slack}")
+  implementation(libs.slack.core)
+  implementation(libs.slack.ktor)
+  implementation(libs.slack.apiClientExt)
+  implementation(libs.slack.apiModelExt)
 
   implementation("io.ktor:ktor-server-core:${Version.ktor}")
   implementation("io.ktor:ktor-server-netty:${Version.ktor}")
